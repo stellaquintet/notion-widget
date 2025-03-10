@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton:400,700|Montserrat:900">
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet">
+<title>Document</title>
+<style>
+
+body {
+    background-color: transparent;
+}
+
+#timer {
+    color: #eeeeee;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-size: .7em;
+    letter-spacing: 5px;
+}
+
+.days {
+    display: inline-block;
+    padding: 20px;
+    width: 70px;
+    border-radius: 5px;
+    background: #e80c0c;
+}
+
+.numbers {
+    font-family: 'Anton', sans-serif;
+    color: #ffffff;
+    font-size: 2em;
+    font-weight:bold;
+    text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<div id="timer">
+    <div class="days"> 
+        <div id="days" class="numbers"></div>days
+    </div> 
+</div>
+
+<script>
+const year = new Date().getFullYear();
+const myDate = new Date('Feb 3, 2025');
+console.log(myDate);
+
+// countdown with adjusted interval
+let timer = setInterval(function() {
+    const today = new Date().getTime();
+    const diff = myDate - today;
+    let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    document.getElementById("days").innerHTML = days;
+}, 1000);
+</script>
+</body>
+</html>

@@ -4,38 +4,41 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton:400,700|Montserrat:900">
-<link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet">
 <title>Anniversary Widget</title>
 <style>
 
 body {
     background-color: transparent;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 #timer {
     color: #eeeeee;
     text-align: center;
     text-transform: uppercase;
-    font-family: 'Lato', sans-serif;
-    font-size: .7em;
-    letter-spacing: 5px;
+    font-size: 3vw;
+    letter-spacing: 0.5vw;
 }
 
 .days {
     display: inline-block;
-    padding: 20px;
-    width: 70px;
-    border-radius: 5px;
+    padding: 1vw;
+    border-radius: 1vw;
     background: #e80c0c;
+    margin: 0 1vw;
 }
 
 .numbers {
     font-family: 'Anton', sans-serif;
     color: #ffffff;
-    font-size: 2em;
-    font-weight:bold;
-    text-align: center;
+    font-size: 6vw;
+    font-weight: bold;
+    line-height: 1.2;
 }
 
 </style>
@@ -44,7 +47,7 @@ body {
 
 <div id="timer">
     <div class="days"> 
-        <div id="days" class="numbers"></div>days since ♡
+        <div id="days" class="numbers"></div> days since ♡
     </div> 
 </div>
 
@@ -59,3 +62,6 @@ let timer = setInterval(function() {
     document.getElementById("days").innerHTML = days;
 }, 1000);
 </script>
+
+</body>
+</html>

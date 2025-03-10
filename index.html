@@ -49,16 +49,13 @@ body {
 </div>
 
 <script>
-const year = new Date().getFullYear();
 const myDate = new Date('Feb 4, 2025');
 console.log(myDate);
 
 let timer = setInterval(function() {
     const today = new Date().getTime();
     const diff = today - myDate.getTime();
-    let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    let days = Math.floor(diff / (1000 * 60 * 60 * 24)) + 1;
     document.getElementById("days").innerHTML = days;
 }, 1000);
 </script>
-</body>
-</html>

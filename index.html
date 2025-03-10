@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton:400,700|Montserrat:900">
 <link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
 <title>Anniversary Widget</title>
 <style>
 body {
@@ -33,15 +33,23 @@ body {
 
 .days {
     font-family: 'Anton', sans-serif;
-    font-size: 2em;
+    font-size: 2.8em;
     font-weight: bold;
+    line-height: 1;
 }
 
-.caption, .date {
+.caption {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    margin-top: 0px;
+}
+
+.date {
     font-family: 'Roboto', sans-serif;
     font-size: 0.7em;
     font-weight: 300;
-    margin-top: 5px;
+    margin-top: 2px;
 }
 
 </style>
@@ -50,7 +58,7 @@ body {
 <div id="timer">
     <div class="days" id="days"></div>
     <div class="caption">days since ♥</div>
-    <div class="date">2025.02.04 ~</div>
+    <div class="date">2025.02.04</div>
 </div>
 
 <script>

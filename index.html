@@ -24,7 +24,6 @@ body {
     align-items: center;
     background: #e80c0c;
     color: #ffffff;
-    font-family: 'Anton', sans-serif;
     letter-spacing: 2px;
     padding: 10px;
     border-radius: 5px;
@@ -33,15 +32,16 @@ body {
 }
 
 .days {
+    font-family: 'Anton', sans-serif;
     font-size: 2em;
     font-weight: bold;
 }
 
-.caption {
-    font-size: 0.7em;
+.caption, .date {
     font-family: 'Roboto', sans-serif;
+    font-size: 0.7em;
     font-weight: 300;
-    margin-top: 0;
+    margin-top: 5px;
 }
 
 </style>
@@ -50,6 +50,7 @@ body {
 <div id="timer">
     <div class="days" id="days"></div>
     <div class="caption">days since ♥</div>
+    <div class="date">2025.02.04 ~</div>
 </div>
 
 <script>

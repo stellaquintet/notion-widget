@@ -4,13 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton:400,700|Montserrat:900">
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet">
 <title>Anniversary Widget</title>
 <style>
-
 body {
     background-color: transparent;
-    font-family: 'Lato', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,37 +17,25 @@ body {
 }
 
 #timer {
-    color: #eeeeee;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #e80c0c;
+    color: #ffffff;
+    font-family: 'Anton', sans-serif;
+    font-size: 2em;
+    letter-spacing: 5px;
     text-align: center;
     text-transform: uppercase;
-    font-size: 3vw;
-    letter-spacing: 0.5vw;
 }
-
-.days {
-    display: inline-block;
-    padding: 1vw;
-    border-radius: 1vw;
-    background: #e80c0c;
-    margin: 0 1vw;
-}
-
-.numbers {
-    font-family: 'Anton', sans-serif;
-    color: #ffffff;
-    font-size: 6vw;
-    font-weight: bold;
-    line-height: 1.2;
-}
-
 </style>
 </head>
 <body>
-
 <div id="timer">
-    <div class="days"> 
-        <div id="days" class="numbers"></div> days since ♡
-    </div> 
+    <div><span id="days" class="numbers"></span> days since ♡</div>
 </div>
 
 <script>
@@ -62,6 +49,5 @@ let timer = setInterval(function() {
     document.getElementById("days").innerHTML = days;
 }, 1000);
 </script>
-
 </body>
 </html>

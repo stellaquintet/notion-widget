@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton:400,700|Montserrat:900">
 <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet">
-<title>Document</title>
+<title>Anniversary Widget</title>
 <style>
 
 body {
@@ -44,19 +44,18 @@ body {
 
 <div id="timer">
     <div class="days"> 
-        <div id="days" class="numbers"></div>days
+        <div id="days" class="numbers"></div>days since
     </div> 
 </div>
 
 <script>
 const year = new Date().getFullYear();
-const myDate = new Date('Feb 3, 2025');
+const myDate = new Date('Feb 4, 2025');
 console.log(myDate);
 
-// countdown with adjusted interval
 let timer = setInterval(function() {
     const today = new Date().getTime();
-    const diff = myDate - today;
+    const diff = today - myDate.getTime();
     let days = Math.floor(diff / (1000 * 60 * 60 * 24));
     document.getElementById("days").innerHTML = days;
 }, 1000);
